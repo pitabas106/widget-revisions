@@ -1,0 +1,41 @@
+/**
+ * Author: NetTantra
+ * @package Widget Revisions
+ */
+
+body {
+
+}
+table.wr-table {
+
+}
+table.wr-table td .avatar {
+	border-radius: 100%;
+}
+
+.footer-border td {
+	border-top: 1px solid #DDD;
+}
+
+.nt-wr-loading,
+.nt-wr-loader {
+	background: url(../images/Spinner-1s-38px.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-transition: unset;
+	transition: unset;
+	background-color: transparent;
+}
+.nt-wr-loading {
+	left: 0;
+	right: 0;
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	top: 0;
+}
+
+.nt-wr-loader {
+	display: inline-block;
+	padding: 12px;
+}
