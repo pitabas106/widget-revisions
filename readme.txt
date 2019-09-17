@@ -5,8 +5,8 @@ Author URI: https://www.nettantra.com/wordpress/?utm_src=widget-revisions
 Author: NetTantra
 Requires at least: 4.5
 Tested up to: 5.2
-Version: 1.0.2
-Stable tag: 1.0.2
+Version: 1.0.3
+Stable tag: 1.0.3
 Requires PHP: 5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -47,8 +47,10 @@ How to install the plugin.
 
 
 == Changelog ==
+= 1.0.3 =
+* Fixed: Plugin code
 
-= 1.1.1 =
+= 1.0.2 =
 * Fixed: table creation SQL query
 
 = 1.0.1 =

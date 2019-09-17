@@ -3,7 +3,7 @@
  Plugin Name: Widget Revisions
  Plugin URI: https://www.nettantra.com/wordpress/?utm_src=widget-revisions
  Description: Create Revisions for Widget. Widget Revisions is your new widget log keeper in WordPress. It keeps the record of every single parameter change you’ve ever made for any widget. It also enables you to rollback your widget to any of those previous settings with a just single click.
- Version: 1.0.2
+ Version: 1.0.3
  Author: NetTantra
  Author URI: https://www.nettantra.com/wordpress/?utm_src=widget-revisions
  Text Domain: widget-revisions

@@ -97,14 +97,19 @@ class WPWidgetRevisions {
 		) );
 
 		$get_current_screen = get_current_screen();
+		
+		$widget->number = is_numeric($widget->number) ? $widget->number : 0;
+		$get_current_screen_base = isset($get_current_screen->base) ? $get_current_screen->base : '';
 
-		if($widget->option_name && $widget->number && $get_current_screen->base != 'customize') {
+		if($widget->option_name && $widget->number && $get_current_screen_base != 'customize') {
 			global $wpdb;
+
 
 			$total_result = $wpdb->get_row( "SELECT COUNT(id) as total_row
 				FROM $this->widget_revisions_table
 				WHERE option_name = '{$widget->option_name}'
 				AND widget_id = $widget->number;" );
+
 
 				if($total_result->total_row > 0) {
 					add_thickbox();
@@ -183,7 +188,7 @@ class WPWidgetRevisions {
 			WHERE option_name 	= '{$option_name}'
 			AND widget_id 			= $widget_id
 			ORDER BY id DESC;" );
-
+		$data = '';
 		if(count($lists) > 0) {
 
 			$data .= '<table style="width: 100%;">';
@@ -254,7 +259,7 @@ class WPWidgetRevisions {
 		if ( ! wp_verify_nonce( $_POST['nonce'], 'wp_widget_revisions_restore_nonce' ) ) {
 			die( 'Security check!' );
 		}
-
+		$error = '';
 		$revision_id = $data['revision_id'];
 		$option_name = $data['option_name'];
 		$widget_id = $data['widget_id'];
@@ -278,8 +283,8 @@ class WPWidgetRevisions {
 
 			$revision_widget_id = $get_revision_data->widget_id;
 			$get_revision_option_value = maybe_unserialize($get_revision_data->option_value);
-
-			if(count($get_option_widget_data) > 0) {
+			
+			if($get_option_widget_data) {
 				$array_option_widget_data = maybe_unserialize($get_option_widget_data->option_value);
 			}
 
